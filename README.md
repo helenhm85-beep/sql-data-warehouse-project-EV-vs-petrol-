@@ -1,24 +1,64 @@
-# sql-data-warehouse-project-EV-vs-petrol-
+
 Welcome to the Data Warehouse and Analytics project!
-The name of the project is "Will EVs Replace Petrol Cars in the EU? - Automated Data Pipeline"
-Logic:
-Layer 1: Flow (new EV registrations) - how fast EV adoption is growing
 
-Layer 2: Stock (total vehicles on the roads) - how big EV presence actually is
+# Will EVs Replace Petrol Cars in the EU? — Automated Data Warehouse
 
-Objective:
-Develop a modern data warehouse using SQL Server to consolidate EV vs petrol car registrations, enabling analytical reporting and informed decision-making.
+## Project Overview
 
-Specifications:
+A modern data warehouse project built to analyse the shift from petrol to electric vehicles across the European Union between 2015 and 2024.
 
-Data Sources: import data from sources Eurostat + API (petrol, electricity prices) provided as CSV files
-Data Quality: Cleanse and resolve data quality issues prior to analysis
-Integration: Combine both sources into a single, user-friendly data model designed for analytical queries
-Scope: data from 2015 to 2024
-Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+This project covers the full data engineering lifecycle: ingestion, transformation, modeling, and reporting — using real-world data from Eurostat and energy price APIs.
 
-Licence:
-This project is licenced under the MIT Licence. You are free to use, modify, and share this project with proper attribution.
+---
 
-About me
-Hi there! I'm Aliona. I'm a reporting specialist in a large international company. Currently I'm in a career transition and aspire to become a data engineer in the future. 
+## Architecture
+
+This project follows the **Medallion Architecture** with three layers:
+
+| Layer | Name | Description |
+|-------|------|-------------|
+| 🥉 Bronze | Raw | Raw data as-is from source files and APIs. No transformations. |
+| 🥈 Silver | Cleaned | Standardised, deduplicated, type-corrected data ready for modelling. |
+| 🥇 Gold | Analytics | Aggregated, business-ready data powering reports and dashboards. |
+
+---
+
+## Tech Stack
+
+| Tool | Purpose |
+|------|---------|
+| PostgreSQL | Data warehouse |
+| Python | Data ingestion, API scraping, pipeline automation |
+| Power BI | Analytics dashboard (Gold layer) |
+| draw.io | Architecture and schema design |
+| GitHub | Version control and documentation |
+
+---
+
+## Data Sources
+
+- **Eurostat** — EV and petrol vehicle registration statistics (CSV)
+- **Energy price APIs** — Electricity and fuel prices across EU countries
+
+**Scope:** European Union | 2015–2024
+
+---
+
+## Project Status
+
+🚧 **In progress**
+
+- [x] Architecture design
+- [x] Schema design
+- [x] Naming conventions defined
+- [x] GitHub repository set up
+- [ ] Bronze layer — raw data ingestion
+- [ ] Silver layer — cleaning and transformation
+- [ ] Gold layer — aggregations and data model
+- [ ] Power BI dashboard
+
+---
+
+## About
+
+Built by **Aliona** — a data professional with a background in reporting and analytics, building hands-on experience in data warehouse design and pipeline development.
