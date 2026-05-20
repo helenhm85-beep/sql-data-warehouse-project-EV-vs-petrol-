@@ -37,7 +37,8 @@ This project follows the **Medallion Architecture** with three layers:
 
 ## Data Sources
 
-- **Eurostat** — EV and petrol vehicle registration statistics (CSV)
+- **Eurostat** — EV and petrol vehicle registration and stock statistics (CSV)
+- **EAFO** - charging stations in EU countries
 - **Energy price APIs** — Electricity and fuel prices across EU countries
 
 **Scope:** European Union | 2015–2024
