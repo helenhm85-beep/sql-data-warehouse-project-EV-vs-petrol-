@@ -53,10 +53,16 @@ This project follows the **Medallion Architecture** with three layers:
 - [x] Schema design
 - [x] Naming conventions defined
 - [x] GitHub repository set up
-- [ ] Bronze layer — raw data ingestion
-- [ ] Silver layer — cleaning and transformation
+- [x] Bronze layer — raw data ingestion
+- [ ] Silver layer — cleaning and transformation - in progress (2 of 3 tables done)
 - [ ] Gold layer — aggregations and data model
 - [ ] Power BI dashboard
+
+Notes:
+While building the Silver layer I accidentally inserted some data twice. 
+Adding a UNIQUE constraint caught it straight away — a good reminder of why these safeguards matter.
+
+The Eurostat files also needed cleaning before loading (empty columns).
 
 ---
 
