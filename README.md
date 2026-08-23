@@ -28,7 +28,7 @@ This project follows the **Medallion Architecture** with three layers:
 | Tool | Purpose |
 |------|---------|
 | PostgreSQL | Data warehouse |
-| Python | Data ingestion, API scraping, pipeline automation |
+| Python | Data ingestion, pipeline automation |
 | Power BI | Analytics dashboard (Gold layer) |
 | draw.io | Architecture and schema design |
 | GitHub | Version control and documentation |
@@ -37,9 +37,9 @@ This project follows the **Medallion Architecture** with three layers:
 
 ## Data Sources
 
-- **Eurostat** — EV and petrol vehicle registration and stock statistics (CSV)
+- **Eurostat** — EV and petrol vehicle registration and stock statistics (CSV), energy prices
 - **EAFO** - charging stations in EU countries
-- **Energy price APIs** — Electricity and fuel prices across EU countries
+- **Europa.eu** — fuel prices across EU countries (Weekly Oil Bulletin)
 
 **Scope:** European Union | 2015–2024
 
@@ -54,7 +54,7 @@ This project follows the **Medallion Architecture** with three layers:
 - [x] Naming conventions defined
 - [x] GitHub repository set up
 - [x] Bronze layer — raw data ingestion
-- [ ] Silver layer — cleaning and transformation - in progress (2 of 3 tables done)
+- [ ] Silver layer — cleaning and transformation - in progress (4 of 5 tables done)
 - [ ] Gold layer — aggregations and data model
 - [ ] Power BI dashboard
 
