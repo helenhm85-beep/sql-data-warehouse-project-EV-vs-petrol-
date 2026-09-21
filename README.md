@@ -54,13 +54,16 @@ This project follows the **Medallion Architecture** with three layers:
 - [x] Naming conventions defined
 - [x] GitHub repository set up
 - [x] Bronze layer — raw data ingestion
-- [ ] Silver layer — cleaning and transformation - in progress (4 of 5 tables done)
-- [ ] Gold layer — aggregations and data model
+- [x] Silver layer — cleaning and transformation - in progress (4 of 5 tables done)
+- [x] Gold layer — aggregations and data model
 - [ ] Power BI dashboard
 
 Notes:
 While building the Silver layer I accidentally inserted some data twice. 
 Adding a UNIQUE constraint caught it straight away — a good reminder of why these safeguards matter.
+
+In stg_vehicle_stock 'Turkey' was spelled differently 'T urkiye' and 'Turkiye' that UNIQUE CONSTRAINT didn't catch because it looks like 2 different countries to PostgreSQL.
+Didn't fix it because it wouldn't affect the Gold layer as Turkiye is not an EU country.
 
 The Eurostat files also needed cleaning before loading (empty columns).
 
