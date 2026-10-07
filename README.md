@@ -56,7 +56,7 @@ This project follows the **Medallion Architecture** with three layers:
 - [x] Bronze layer — raw data ingestion
 - [x] Silver layer — cleaning and transformation - in progress (4 of 5 tables done)
 - [x] Gold layer — aggregations and data model
-- [ ] Power BI dashboard
+- [x] Power BI dashboard
 
 # Challenges & Lessons Learned
 
@@ -93,6 +93,8 @@ It wasn't. The Netherlands' total registrations for 2018 came to 50,158 — smal
 This exposed a blind spot in my data_complete flag: it checks that the combustion count isn't zero, but not that the total is plausible. The Netherlands had a non-zero combustion figure and still a broken total. I scoped the dashboard to 2020–2024 — chosen because the charging data only starts in 2020, and as a side effect it excludes every unreliable pre-2019 vehicle year.
 
 Lesson: a completeness check is only as good as its definition of complete. "Combustion isn't zero" wasn't enough; "the total is in a sane range" would have caught this. Sanity-checking an aggregate against real-world scale catches things no row-level constraint will.
+
+ 
 
 ---
 
